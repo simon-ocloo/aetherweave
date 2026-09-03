@@ -16,6 +16,12 @@ The architecture reflects the philosophy directly: the `aether` dialect knows no
 
 ---
 
+## Build
+
+Everything runs in Docker. See [documentation/BUILDING.md](documentation/BUILDING.md).
+
+---
+
 ## Repositories
 
 | Repo | Language | Role |
@@ -33,4 +39,10 @@ The architecture reflects the philosophy directly: the `aether` dialect knows no
 | `aw-compile` | compiler | Compiles an ONNX model into training and inference artifacts |
 | `aw-execute` | executor | Executes a compiled artifact (`--mode inference` or `--mode training`) |
 | `aw-opt` | compiler | Standalone MLIR pass runner for debugging passes in isolation |
-| `aw-run` | orchestration | Unified CLI. Entry point for all top-level operations |
+| `aw-run` | aetherweave | Unified CLI. Entry point for all top-level operations |
+
+### `aw-run` subcommands
+
+| Subcommand | Description |
+|---|---|
+| `aw-run workflow --name <name>` | Runs a named end-to-end scenario: fetch data → compile → train → infer → verify |
