@@ -1,0 +1,6 @@
+[submodule "aetherweave-compiler"]
+	path = aetherweave-compiler
+	url = git@github.com:simon-ocloo/aetherweave-compiler.git
+[submodule "aetherweave-executor"]
+	path = aetherweave-executor
+	url = git@github.com:simon-ocloo/aetherweave-executor.git
