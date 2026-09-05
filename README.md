@@ -27,6 +27,7 @@ Everything runs in Docker. See [documentation/BUILDING.md](documentation/BUILDIN
 | Document | Content |
 |---|---|
 | [BUILDING.md](documentation/BUILDING.md) | Building the Docker images |
+| [DEBUGGING.md](documentation/DEBUGGING.md) | Debugging tools and techniques |
 | [ROADMAP.md](documentation/ROADMAP.md) | Milestones and current progress |
 | [RUNNING.md](documentation/RUNNING.md) | Running workflows, configuration file formats |
 
