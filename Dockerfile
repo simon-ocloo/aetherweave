@@ -10,10 +10,6 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     --extra-index-url https://download.pytorch.org/whl/cpu \
     torch numpy onnx
 
-RUN pip3 install --no-cache-dir --break-system-packages \
-    --extra-index-url https://download.pytorch.org/whl/cpu \
-    torch numpy onnx
-
 WORKDIR /workspace
 
 COPY --from=compiler-stage /workspace/bin/ ./bin/
