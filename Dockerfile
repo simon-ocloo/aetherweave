@@ -3,7 +3,7 @@ FROM ubuntu:26.04 AS compiler-builder
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
-    && apt-get install -y clang-20 cmake ninja-build ca-certificates \
+    && apt-get install -y clang-20 llvm-20-dev libmlir-20-dev mlir-20-tools cmake ninja-build ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
