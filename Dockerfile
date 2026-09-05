@@ -4,8 +4,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/workspace:/workspace/bin:${PATH}"
 
 RUN apt-get update \
-    && apt-get install -y python3 \
+    && apt-get install -y python3 python3-pip \
     && rm -rf /var/lib/apt/lists/*
+RUN pip3 install --no-cache-dir --break-system-packages \
+    --extra-index-url https://download.pytorch.org/whl/cpu \
+    torch numpy onnx
+
 RUN pip3 install --no-cache-dir --break-system-packages \
     --extra-index-url https://download.pytorch.org/whl/cpu \
     torch numpy onnx
