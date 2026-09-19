@@ -46,7 +46,7 @@ Input: a single-node ONNX Add model. Output: verified numerical result.
 | Step | Description | Status |
 |---|---|---|
 | 1 | Workflow `add` — end-to-end test script: export model, compile, execute, verify | ✅ |
-| 2 | `aether.add` dialect — op definition and build wiring | |
+| 2 | `aether.add` dialect — op definition and build wiring | ✅ |
 | 3 | ONNX importer — read model, emit `aether.add` IR | |
 | 4 | Lowering pass — `aether.add` to low-level IR | |
 | 5 | Full compilation pipeline — dialect to native code | |
