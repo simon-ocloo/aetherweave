@@ -6,5 +6,5 @@ def run():
     workflow_name = "MOCK"
 
     print_header(workflow_name)
-    execute(workflow_name, "./bin/aw-compile")
-    execute(workflow_name, "./bin/aw-execute")
+    execute(workflow_name, "./bin/aw-compile", check=False)
+    execute(workflow_name, "./bin/aw-execute", check=False)
