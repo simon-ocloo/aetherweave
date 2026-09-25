@@ -49,7 +49,7 @@ Input: a single-node ONNX Add model. Output: verified numerical result.
 | 2 | `aether.add` dialect — op definition and build wiring | ✅ |
 | 3 | ONNX importer — read model, emit `aether.add` IR | ✅ |
 | 4 | Lowering pass — `aether.add` to low-level IR | ✅ |
-| 5 | Full compilation pipeline — dialect to native code | |
+| 5 | Full compilation pipeline — dialect to native code | ✅ |
 | 6 | AOT compilation — produce artifact (`kernels.so` + `metadata.json`) | |
 | 7 | Executor — load artifact, run kernel, write output | |
 | 8 | End-to-end — `docker run aetherweave ./aw-run workflow --name add` | |
