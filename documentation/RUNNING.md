@@ -26,11 +26,13 @@ Each binary takes a single JSON configuration file as its only argument. Workflo
 
 ```json
 {
-    "import_path":      "<path>",
-    "export_path":      "<path>",
+    "debug_mode":           true | false,
+    "debug_directory_path": "<path>" | null,
+    "import_path":          "<path>",
+    "export_path":          "<path>",
     "target": {
-        "device":       "<device>",
-        "architecture": "<architecture>"
+        "device":           "<device>",
+        "architecture":     "<architecture>"
     }
 }
 ```
@@ -39,9 +41,13 @@ Each binary takes a single JSON configuration file as its only argument. Workflo
 
 ```json
 {
-    "import_path": "<path>",
-    "mode":        "inference" | "training",
-    "inputs":      ["<path>", ...],
-    "outputs":     ["<path>", ...]
+    "debug_mode":           true | false,
+    "debug_directory_path": "<path>" | null,
+    "import_path":          "<path>",
+    "mode":                 "inference" | "training",
+    "inputs":               ["<path>", ...],
+    "outputs":              ["<path>", ...]
 }
 ```
+
+- `debug_mode: true` requires a non-empty `debug_directory_path` (see [DEBUGGING.md](DEBUGGING.md)).

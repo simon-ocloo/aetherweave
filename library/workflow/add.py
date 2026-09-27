@@ -61,11 +61,13 @@ def run():
 
             with open(compile_configuration_path, "w") as file:
                 json.dump({
-                    "import_path":      model_path,
-                    "export_path":      artifact_path,
+                    "debug_mode":           debug_directory_path is not None,
+                    "debug_directory_path": debug_directory_path,
+                    "import_path":          model_path,
+                    "export_path":          artifact_path,
                     "target": {
-                        "device":       "CPU",
-                        "architecture": cpu_architecture(),
+                        "device":           "CPU",
+                        "architecture":     cpu_architecture(),
                     },
                 }, file, indent=4)
             execute(workflow_name, "./bin/aw-compile", compile_configuration_path)
@@ -75,10 +77,12 @@ def run():
 
             with open(execute_configuration_path, "w") as file:
                 json.dump({
-                    "import_path": artifact_path,
-                    "mode":        "inference",
-                    "inputs":      [x_path, y_path],
-                    "outputs":     [z_path],
+                    "debug_mode":           debug_directory_path is not None,
+                    "debug_directory_path": debug_directory_path,
+                    "import_path":          artifact_path,
+                    "mode":                 "inference",
+                    "inputs":               [x_path, y_path],
+                    "outputs":              [z_path],
                 }, file, indent=4)
             execute(workflow_name, "./bin/aw-execute", execute_configuration_path)
 
